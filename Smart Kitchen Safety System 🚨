@@ -1,0 +1,34 @@
+Nnti file readme.md nya edit isinya ini:
+# Smart Kitchen Safety System 🚨
+
+Sistem keamanan dapur cerdas berbasis IoT/Mikrokontroler yang dirancang untuk mendeteksi kebocoran gas LPG dan kenaikan suhu ekstrem secara otomatis.
+
+## 📋 Fitur Utama
+- **Deteksi Gas:** Menggunakan sensor MQ-2 untuk mendeteksi asap/gas.
+- **Deteksi Suhu:** Menggunakan TMP36 untuk memantau overheat.
+- **Alarm Otomatis:** Buzzer dan LED Merah aktif saat bahaya.
+- **Exhaust Fan Otomatis:** Motor DC berputar kencang untuk membuang gas bocor.
+- **Monitoring:** Layar LCD 16x2 menampilkan status real-time.
+
+## 🛠️ Komponen yang Digunakan
+1. Arduino Uno R3
+2. Sensor Gas MQ-2
+3. Sensor Suhu TMP36
+4. LCD 16x2 + Potensiometer
+5. Relay Module 5V
+6. DC Motor (Simulasi Exhaust Fan)
+7. Transistor NPN (Driver Relay)
+8. Buzzer & LED
+9. Baterai 9V (Power Source Motor)
+
+## 📸 Skema Rangkaian
+![Wiring Diagram](IMG-20260112-WA0008.jpg)
+*(Pastikan nama file gambar yang Anda upload tadi sama dengan nama di dalam kurung ini)*
+
+## 🚀 Cara Kerja
+1. Sistem membaca sensor setiap 0.5 detik.
+2. Jika **Gas > 320** ATAU **Suhu > 60°C**:
+   - Status LCD berubah menjadi "BAHAYA".
+   - Relay aktif -> Kipas menyala.
+   - Alarm berbunyi.
+3. Jika kondisi normal, kipas mati dan LCD menampilkan "AMAN".
